@@ -41,12 +41,30 @@ main {
   width: 130px;
 }
 
+.box img.tiger {
+  height: 120px;
+  width: 145px;
+  /* display: inline; */
+  transform: translateY(12px);
+}
+
 .progress {
   /* height: 1rem;
   background: red;
   position: fixed;
   top: 0; */
   /* left: 0; */
+}
+.legend {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap;
+  opacity: 0.4;
+  font-weight: 900;
+}
+
+.box p {
+  font-size: 130px;
 }
 
 @media (prefers-color-scheme: dark) {
