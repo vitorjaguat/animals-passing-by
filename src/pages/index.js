@@ -167,7 +167,7 @@ export default function Home() {
         >
           <motion.div
             style={{
-              x: useTransform(scrollYProgress, [0.2, 1], ['-20vw', '100vw']),
+              x: useTransform(scrollYProgress, [0.2, 1], ['-40vw', '100vw']),
               scale: useTransform(scrollYProgress, [0, 1], [0.2, 0.98]),
             }}
           >
