@@ -71,6 +71,7 @@ import {
   useMotionValueEvent,
   useScroll,
   useTransform,
+  useSpring,
 } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -168,7 +169,9 @@ export default function Home() {
           <motion.div
             style={{
               x: useTransform(scrollYProgress, [0.2, 1], ['-40vw', '100vw']),
-              scale: useTransform(scrollYProgress, [0, 1], [0.2, 0.98]),
+              scale: useSpring(
+                useTransform(scrollYProgress, [0, 1], [0.2, 0.98])
+              ),
             }}
           >
             <img src='/deer1.png' alt='deer' />
@@ -176,7 +179,9 @@ export default function Home() {
           <motion.div
             style={{
               x: useTransform(scrollYProgress, [0.2, 1], ['-80vw', '100vw']),
-              scale: useTransform(scrollYProgress, [0, 1], [0.2, 0.98]),
+              scale: useSpring(
+                useTransform(scrollYProgress, [0, 1], [0.2, 0.98])
+              ),
             }}
           >
             <img src='/deer1.png' alt='deer' />
@@ -185,6 +190,9 @@ export default function Home() {
             style={{
               x: useTransform(scrollYProgress, [0, 1], ['-200vw', '100vw']),
               width: 'fit-content',
+              scale: useSpring(
+                useTransform(scrollYProgress, [0, 1], [0.2, 0.98])
+              ),
             }}
           >
             <img src='/deer1.png' alt='deer' />
@@ -199,7 +207,7 @@ export default function Home() {
               ),
               top: useTransform(scrollYProgress, [0, 1], ['0%', '100%']),
               left: useTransform(scrollYProgress, [0, 1], ['-10%', '100%']),
-              scale: useTransform(scrollYProgress, [0, 1], [1, 3]),
+              scale: useSpring(useTransform(scrollYProgress, [0, 1], [1, 3])),
               position: 'absolute',
             }}
           >
